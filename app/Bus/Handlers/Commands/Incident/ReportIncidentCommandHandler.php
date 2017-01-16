@@ -101,7 +101,8 @@ class ReportIncidentCommandHandler
                 null,
                 null,
                 null,
-                null
+                null,
+                false
             ));
         }
 
