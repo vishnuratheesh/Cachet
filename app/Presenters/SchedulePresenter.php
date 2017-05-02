@@ -11,9 +11,9 @@
 
 namespace CachetHQ\Cachet\Presenters;
 
-use CachetHQ\Cachet\Dates\DateFactory;
 use CachetHQ\Cachet\Models\Schedule;
 use CachetHQ\Cachet\Presenters\Traits\TimestampsTrait;
+use CachetHQ\Cachet\Services\Dates\DateFactory;
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Contracts\Support\Arrayable;
 use McCool\LaravelAutoPresenter\BasePresenter;
@@ -30,15 +30,15 @@ class SchedulePresenter extends BasePresenter implements Arrayable
     /**
      * The date factory instance.
      *
-     * @var \CachetHQ\Cachet\Dates\DateFactory
+     * @var \CachetHQ\Cachet\Services\Dates\DateFactory
      */
     protected $dates;
 
     /**
      * Create a new presenter.
      *
-     * @param \CachetHQ\Cachet\Dates\DateFactory $dates
-     * @param \CachetHQ\Cachet\Models\Schedule   $resource
+     * @param \CachetHQ\Cachet\Services\Dates\DateFactory $dates
+     * @param \CachetHQ\Cachet\Models\Schedule            $resource
      *
      * @return void
      */
@@ -206,11 +206,13 @@ class SchedulePresenter extends BasePresenter implements Arrayable
     /**
      * Formats the completed_at time ready to be used by bootstrap-datetimepicker.
      *
-     * @return string
+     * @return string|void
      */
     public function completed_at_datetimepicker()
     {
-        return $this->dates->make($this->wrappedObject->completed_at)->format('Y-m-d H:i');
+        if ($this->wrappedObject->completed_at !== '0000-00-00 00:00:00') {
+            return $this->dates->make($this->wrappedObject->completed_at)->format('Y-m-d H:i');
+        }
     }
 
     /**

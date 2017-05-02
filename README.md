@@ -1,4 +1,4 @@
-<p align="center"><img src="/public/img/cachet-logo@2x.png"></p>
+<p align="center"><img src="https://demo.cachethq.io/img/cachet-logo.svg" width="50%"></p>
 
 <p align="center">
 <a href="https://styleci.io/repos/26730195/"><img src="https://styleci.io/repos/26730195/shield" alt="StyleCI"></a>
@@ -9,6 +9,10 @@
 </p>
 
 Cachet is a beautiful and powerful open source status page system.
+
+## Community
+
+You can now [join our Slack community!](http://cachethq-slack.herokuapp.com)
 
 ## Overview
 
@@ -53,7 +57,7 @@ If you'd like to contribute translations, please check out our [CrowdIn project]
 
 ## Professional Installation Service
 
-We offer a professional installation service. To find out more, email us at [support@alt-three.com](mailto:support@alt-three.com?Cachet Installation)
+We offer a professional installation service. To find out more, email us at [support@alt-three.com](mailto:support@alt-three.com?Cachet%20Installation)
 
 ## Security Vulnerabilities
 
